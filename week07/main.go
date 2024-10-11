@@ -1,13 +1,20 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"strings"
+	"log"
+	"os"
 )
 
 func main() {
-	broken := "G# r#cks!"
-	r := strings.NewReplacer("#", "o")
-	fmt.Println(broken)
-	fmt.Println(r.Replace(broken))
+	in := bufio.NewReader(os.Stdin)
+	fmt.Println("Input your name : ")
+	name, err := in.ReadString('\n')
+
+	if err != nil {
+		log.Fatal(err)
+	} else {
+		fmt.Println(name)
+	}
 }

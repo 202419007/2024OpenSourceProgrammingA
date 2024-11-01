@@ -21,7 +21,7 @@ func main() {
 	n, err := strconv.Atoi(i)
 
 	counts := 0
-	for j := 1; j <= n; j++ { // 1부터 입력된 수까지 반복
+	for j := 2; j < n; j++ { // 2부터 입력된 수 앞까지 반복
 		if n%j == 0 { // 약수면
 			counts++ // 나누어 떨어지는 횟수 카운트
 		}
